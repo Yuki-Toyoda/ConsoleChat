@@ -31,14 +31,14 @@ void ChatServer(void) {
 	// ソケットを開けていない場合はエラー
 	if (listen_s == INVALID_SOCKET) {
 		// ログ出力
-		printf("ソケットオープン失敗");
+		printf("ソケットオープン失敗\n");
 		// クリーンアップ
 		WSACleanup();
 		// 終了
 		return;
 	}
 	// 成功時はログに出力
-	printf("ソケットオープン成功");
+	printf("ソケットオープン成功\n");
 
 	// ソケットに名前を付ける
 	memset(&saddr, 0, sizeof(SOCKADDR_IN));
@@ -153,7 +153,7 @@ void ChatClient() {
 	// ソケットを開けていない場合はエラー
 	if (s == INVALID_SOCKET) {
 		// ログ出力
-		printf("ソケットオープン失敗");
+		printf("ソケットオープン失敗\n");
 		// 終了
 		return;
 	}
